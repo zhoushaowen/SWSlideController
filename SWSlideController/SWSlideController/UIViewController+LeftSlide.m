@@ -38,7 +38,7 @@ static char LeftSlideWidth;
     leftSlideController.modalPresentationStyle = UIModalPresentationCustom;
     self.leftSlideTransitioningModel = [SWLeftSlideTransitioningModel new];
     leftSlideController.transitioningDelegate = self.leftSlideTransitioningModel;
-    [self presentViewController:leftSlideController animated:YES completion:nil];
+    [[[UIApplication sharedApplication].delegate window].rootViewController presentViewController:leftSlideController animated:YES completion:nil];
 }
 
 @end
