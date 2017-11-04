@@ -50,44 +50,48 @@
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.3f;
+    return 0.25f;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    UIView *containerView = [transitionContext containerView];
     if(_isPresent){
-        UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-        [containerView addSubview:toView];
-        CGRect rect = toView.frame;
-        rect.origin.x = - rect.size.width;
-        toView.frame = rect;
-        containerView.userInteractionEnabled = NO;
-        containerView.backgroundColor = [UIColor clearColor];
-        [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-            CGRect rect = toView.frame;
-            rect.origin.x = 0;
-            toView.frame = rect;
-            containerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3f];
-        } completion:^(BOOL finished) {
-            containerView.userInteractionEnabled = YES;
-            [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
-        }];
+        [self doPresentAnimation:transitionContext];
     }else{
-        UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-        containerView.userInteractionEnabled = NO;
-        [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            CGRect rect = fromView.frame;
-            rect.origin.x = - rect.size.width;
-            fromView.frame = rect;
-            containerView.backgroundColor = [UIColor clearColor];
-        } completion:^(BOOL finished) {
-            [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
-            containerView.userInteractionEnabled = YES;
-        }];
+        [self doDismissAnimation:transitionContext];
     }
 }
 
+- (void)doPresentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+    [containerView addSubview:toView];
+    CGRect rect = toView.frame;
+    rect.origin.x = - rect.size.width;
+    toView.frame = rect;
+    containerView.backgroundColor = [UIColor clearColor];
+    [UIView animateWithDuration:0.35f delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        CGRect rect = toView.frame;
+        rect.origin.x = 0;
+        toView.frame = rect;
+        containerView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3f];
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+    }];
+}
+
+- (void)doDismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    [UIView animateWithDuration:0.35f delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        CGRect rect = fromView.frame;
+        rect.origin.x = - rect.size.width;
+        fromView.frame = rect;
+        containerView.backgroundColor = [UIColor clearColor];
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+    }];
+}
 
 
 

@@ -20,12 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3603C0991E8B8CAA00F1BACB /* SWLeftSlidePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWLeftSlidePresentationController.h; path = SWSlideController/SWLeftSlidePresentationController.h; sourceTree = "<group>"; };
-		3603C09A1E8B8CAA00F1BACB /* SWLeftSlidePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWLeftSlidePresentationController.m; path = SWSlideController/SWLeftSlidePresentationController.m; sourceTree = "<group>"; };
-		3603C09B1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWLeftSlideTransitioningModel.h; path = SWSlideController/SWLeftSlideTransitioningModel.h; sourceTree = "<group>"; };
-		3603C09C1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWLeftSlideTransitioningModel.m; path = SWSlideController/SWLeftSlideTransitioningModel.m; sourceTree = "<group>"; };
-		3603C09D1E8B8CAA00F1BACB /* UIViewController+LeftSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LeftSlide.h"; path = "SWSlideController/UIViewController+LeftSlide.h"; sourceTree = "<group>"; };
-		3603C09E1E8B8CAA00F1BACB /* UIViewController+LeftSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LeftSlide.m"; path = "SWSlideController/UIViewController+LeftSlide.m"; sourceTree = "<group>"; };
+		3603C0991E8B8CAA00F1BACB /* SWLeftSlidePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLeftSlidePresentationController.h; sourceTree = "<group>"; };
+		3603C09A1E8B8CAA00F1BACB /* SWLeftSlidePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLeftSlidePresentationController.m; sourceTree = "<group>"; };
+		3603C09B1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLeftSlideTransitioningModel.h; sourceTree = "<group>"; };
+		3603C09C1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLeftSlideTransitioningModel.m; sourceTree = "<group>"; };
+		3603C09D1E8B8CAA00F1BACB /* UIViewController+LeftSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LeftSlide.h"; sourceTree = "<group>"; };
+		3603C09E1E8B8CAA00F1BACB /* UIViewController+LeftSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LeftSlide.m"; sourceTree = "<group>"; };
 		366D33361E8A157900A43CFE /* SWSlideController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWSlideController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		366D333A1E8A157900A43CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		366D333C1E8A157900A43CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +54,12 @@
 		3603C0981E8B8BF100F1BACB /* SWSlideController */ = {
 			isa = PBXGroup;
 			children = (
+				3603C0991E8B8CAA00F1BACB /* SWLeftSlidePresentationController.h */,
+				3603C09A1E8B8CAA00F1BACB /* SWLeftSlidePresentationController.m */,
+				3603C09B1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.h */,
+				3603C09C1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.m */,
+				3603C09D1E8B8CAA00F1BACB /* UIViewController+LeftSlide.h */,
+				3603C09E1E8B8CAA00F1BACB /* UIViewController+LeftSlide.m */,
 			);
 			path = SWSlideController;
 			sourceTree = "<group>";
@@ -77,12 +83,6 @@
 		366D33381E8A157900A43CFE /* SWSlideController */ = {
 			isa = PBXGroup;
 			children = (
-				3603C0991E8B8CAA00F1BACB /* SWLeftSlidePresentationController.h */,
-				3603C09A1E8B8CAA00F1BACB /* SWLeftSlidePresentationController.m */,
-				3603C09B1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.h */,
-				3603C09C1E8B8CAA00F1BACB /* SWLeftSlideTransitioningModel.m */,
-				3603C09D1E8B8CAA00F1BACB /* UIViewController+LeftSlide.h */,
-				3603C09E1E8B8CAA00F1BACB /* UIViewController+LeftSlide.m */,
 				3603C0981E8B8BF100F1BACB /* SWSlideController */,
 				366D333C1E8A157900A43CFE /* AppDelegate.h */,
 				366D333D1E8A157900A43CFE /* AppDelegate.m */,
@@ -138,7 +138,7 @@
 				TargetAttributes = {
 					366D33351E8A157900A43CFE = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 87Y7GVX537;
+						DevelopmentTeam = T2KGXA54VS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -305,7 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 87Y7GVX537;
+				DEVELOPMENT_TEAM = T2KGXA54VS;
 				INFOPLIST_FILE = SWSlideController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -318,7 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 87Y7GVX537;
+				DEVELOPMENT_TEAM = T2KGXA54VS;
 				INFOPLIST_FILE = SWSlideController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

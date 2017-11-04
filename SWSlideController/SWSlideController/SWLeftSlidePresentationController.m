@@ -74,8 +74,12 @@
             }
             NSLog(@"percentComplete:%f",_transitioningModel.interactiveTransitioningModel.percentComplete);
             if(_transitioningModel.interactiveTransitioningModel.percentComplete>0.3f){
+                //修改动画速度，让动画不显得那么突兀
+                _transitioningModel.interactiveTransitioningModel.completionSpeed = 0.4f;
                 [_transitioningModel.interactiveTransitioningModel finishInteractiveTransition];
             }else{
+                //修改动画速度，让动画不显得那么突兀
+                _transitioningModel.interactiveTransitioningModel.completionSpeed = 0.3f;
                 [_transitioningModel.interactiveTransitioningModel cancelInteractiveTransition];
             }
             _transitioningModel.interactiveTransitioningModel = nil;
